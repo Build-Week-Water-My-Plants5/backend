@@ -1,0 +1,47 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "\"water-my-plants\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "migrateh": "heroku run knex migrate:latest -a water-the-plants-api",
+    "rollbackh": "heroku run knex migrate:rollback -a water-the-plants-api",
+    "databaseh": "heroku pg:psql -a water-the-plants-api",
+    "seedh": "heroku run knex seed:run -a water-the-plants-api",
+    "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand",
+    "deploy": "git push heroku leo-hays-postgres"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Build-Week-Water-My-Plants5/backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Build-Week-Water-My-Plants5/backend/issues"
+  },
+  "homepage": "https://github.com/Build-Week-Water-My-Plants5/backend#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.2.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.14",
+    "knex-cleaner": "^1.3.1",
+    "pg": "^8.7.1",
+    "yup": "^0.32.11"
+  }
+}
