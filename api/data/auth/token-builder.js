@@ -12,7 +12,7 @@ module.exports = function (user) {
 	}
 	const token = jwt.sign(
 		payload,
-		JWT_SECRET,
+		JWT_SECRET || 'ssh',
 		options,
 	)
 	return token
