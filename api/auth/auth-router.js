@@ -44,18 +44,4 @@ router.post("/login",
 		}
 	})
 
-router.get("/logout", (req, res, next) => {
-	if (req.session.user) {
-		req.session.destroy(error => {
-			if (error) {
-				res.status(200).json({ message: "Error logging out." })
-			} else {
-				res.status(200).json({ message: "Logged out." })
-			}
-		});
-	} else {
-		res.status(200).json({ message: "There was no session to begin with." })
-	}
-})
-
 module.exports = router;
