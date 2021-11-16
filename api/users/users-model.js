@@ -26,7 +26,7 @@ function update(user_id, changes) {
 }
 
 async function add(newUser) {
-	const [user] = await db('users').insert(newUser, ['user_id', 'username', 'phone_number'])
+	const [user] = await db('users').insert(newUser, ['user_id', 'username'])
 	return user
 }
 
