@@ -6,16 +6,13 @@ const {
 	checkUsernameExists,
 	checkUsernameFree,
 	noMissingInformation,
-	noMissingCredentials,
-	checkPhoneNumberFree,
-	checkPhoneNumberLength
+	noMissingCredentials
 } = require('./auth-middleware');
 
 
 router.post("/register",
 	noMissingInformation,
-	checkUsernameFree, checkPhoneNumberLength,
-	checkPhoneNumberFree,
+	checkUsernameFree,
 	(req, res, next) => {
 		const user = req.body;
 		const rounds = process.env.BCRYPT_ROUNDS || 8;
