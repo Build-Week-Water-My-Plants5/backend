@@ -16,7 +16,7 @@ function getUserPlants(user_id) {
 	return db("users")
 		.leftJoin('plants', 'users.user_id', 'plants.user_id')
 		.where("users.user_id", user_id)
-		.select('h2oFrequency', 'image', 'nickname', 'plant_id', 'species')
+		.select('h2oFrequency', 'image', 'nickname', 'plant_id', 'species', 'phone_number')
 		.orderBy('plant_id')
 }
 
@@ -26,7 +26,7 @@ function update(user_id, changes) {
 }
 
 async function add(newUser) {
-	const [user] = await db('users').insert(newUser, ['user_id', 'username'])
+	const [user] = await db('users').insert(newUser, ['user_id', 'username', 'phone_number'])
 	return user
 }
 
