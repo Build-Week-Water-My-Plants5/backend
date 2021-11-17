@@ -1,6 +1,8 @@
 # backend
 
-IN PROGRESS
+
+* URL
+- https://water-the-plants-api.herokuapp.com
 
 # Users
 
