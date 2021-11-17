@@ -2,6 +2,8 @@
 
 IN PROGRESS
 
+# Users
+
 [GET] /api/users/
 
 [GET] /api/users/:id
@@ -10,9 +12,13 @@ IN PROGRESS
 
 [PUT] /api/users/:id
 
+# Auth
+
 [POST] /api/auth/register
 
 [POST] /api/auth/login
+
+# Plants
 
 [GET] /api/plants/
 
