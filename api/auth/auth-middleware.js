@@ -29,7 +29,7 @@ function checkUsernameFree(req, res, next) {
 
 const noMissingInformation = (req, res, next) => {
 	const { username, password } = req.body
-	if (!username || !password || !phone_number) {
+	if (!username || !password) {
 		res.status(422).json({ message: "Username and password are required." })
 	} else {
 		next()
