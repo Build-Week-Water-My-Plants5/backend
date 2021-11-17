@@ -14,7 +14,7 @@
     "databaseh": "heroku pg:psql -a water-the-plants-api",
     "seedh": "heroku run knex seed:run -a water-the-plants-api",
     "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand",
-    "deploy": "git push heroku leo-hays"
+    "deploy": "git push heroku main"
   },
   "repository": {
     "type": "git",
