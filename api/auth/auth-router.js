@@ -33,7 +33,6 @@ router.post("/login",
 		const { username, password } = req.body;
 		if (bcrypt.compareSync(password, req.user.password)) {
 			const token = tokenBuilder(req.user)
-			req.session.user = req.user
 			const { user_id } = req.user;
 			res.status(200).json({ message: `Welcome ${username}!`, user_id, token })
 		} else {
