@@ -8,6 +8,8 @@
 
 [GET] /api/users/
 
+collection of all users
+
 ```JSON
 [
     {
@@ -44,6 +46,8 @@
 ```
 [GET] /api/users/:id
 
+specific user
+
 ```JSON
 {
     "user_id": 1,
@@ -53,6 +57,9 @@
 }
 ```
 [GET] /api/users/:id/plants
+
+gets plants of the specific user
+
 ```JSON
 [
     {
@@ -66,6 +73,9 @@
 ]
 ```
 [PUT] /api/users/:id
+
+changes specific user info
+
 ```JSON
 {
     "message": "User info updated"
@@ -74,6 +84,9 @@
 # Auth
 
 [POST] /api/auth/register
+
+adds new user to database
+
 ```JSON
 {
     "user_id": 6,
@@ -82,6 +95,9 @@
 }
 ```
 [POST] /api/auth/login
+
+logs in user and gives token
+
 ```JSON
 {
     "message": "Welcome doomguy!",
@@ -92,6 +108,9 @@
 # Plants
 
 [GET] /api/plants/
+
+get's **ALL** plants in database 
+
 ```JSON
 [
     {
@@ -113,6 +132,9 @@
 ]
 ```
 [GET] /api/plants/:id
+
+get's plants by **plant_id**
+
 ```JSON
 {
     "plant_id": 1,
@@ -124,6 +146,9 @@
 }
 ```
 [PUT] /api/plants/:id
+
+changes plant info
+
 ```JSON
 {
     "plant_id": 2,
@@ -135,12 +160,18 @@
 }
 ```
 [DELETE] /api/plants/:id
+
+removes plant form database
+
 ```JSON
 {
     "message": "Plant was killed by magic"
 }
 ```
 [POST] /api/plants/
+
+adds new plant to database
+
 ```JSON
 {
     "plant_id": 1,
