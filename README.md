@@ -8,7 +8,9 @@
 
 [GET] /api/users/
 
-`
+```JSON
+
+
 [
     {
         "user_id": 1,
@@ -41,19 +43,19 @@
         "password": "$2a$08$GWbMLymfTh7z/qP7KevzdOL3pvabK39AHHWfuG.A1OrqxVfV0mdIu"
     }
 ]
-`
-
+```
 [GET] /api/users/:id
-`
+
+```JSON
 {
     "user_id": 1,
     "username": "abraham",
     "phone_number": null,
     "password": "$2a$08$0FsvdkDvW/bt2JD26mgFcuxgZDuEbR/6hrVjdno4Js10If/dXVaM."
 }
-`
+```
 [GET] /api/users/:id/plants
-`
+```JSON
 [
     {
         "h2o_frequency": null,
@@ -64,35 +66,35 @@
         "phone_number": null
     }
 ]
-`
+```
 [PUT] /api/users/:id
-`
+```JSON
 {
     "message": "User info updated"
 }
-`
+```
 # Auth
 
 [POST] /api/auth/register
-`
+```JSON
 {
     "user_id": 6,
     "username": "doomguy",
     "phone_number": null
 }
-`
+```
 [POST] /api/auth/login
-`
+```JSON
 {
     "message": "Welcome doomguy!",
     "user_id": 6,
     "token": "{token text here}"
 }
-`
+```
 # Plants
 
 [GET] /api/plants/
-`
+```JSON
 [
     {
         "plant_id": 1,
@@ -111,9 +113,9 @@
         "user_id": 2
     }
 ]
-`
+```
 [GET] /api/plants/:id
-`
+```JSON
 {
     "plant_id": 1,
     "nickname": "pee-shooter",
@@ -122,9 +124,9 @@
     "image_url": null,
     "user_id": 6
 }
-`
+```
 [PUT] /api/plants/:id
-`
+```JSON
 {
     "plant_id": 2,
     "nickname": "bar-tree",
@@ -133,15 +135,15 @@
     "image_url": null,
     "user_id": 2
 }
-`
+```
 [DELETE] /api/plants/:id
-`
+```JSON
 {
     "message": "Plant was killed by magic"
 }
-`
+```
 [POST] /api/plants/
-`
+```JSON
 {
     "plant_id": 1,
     "nickname": "pee-shooter",
@@ -150,4 +152,4 @@
     "image_url": null,
     "user_id": 6
 }
-`
+```
