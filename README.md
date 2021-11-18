@@ -65,13 +65,27 @@
 
 [PUT] /api/users/:id
 
-
+{
+    "message": "User info updated"
+}
 
 # Auth
 
 [POST] /api/auth/register
 
+{
+    "user_id": 6,
+    "username": "doomguy",
+    "phone_number": null
+}
+
 [POST] /api/auth/login
+
+{
+    "message": "Welcome doomguy!",
+    "user_id": 6,
+    "token": "{token text here}"
+}
 
 # Plants
 

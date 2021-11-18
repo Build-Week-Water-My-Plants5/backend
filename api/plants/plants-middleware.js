@@ -1,9 +1,9 @@
 const Users = require('../users/users-model')
 
 const noMissingInformation = (req, res, next) => {
-	const { nickname, species, h2oFrequency, user_id } = req.body
-	if (!nickname || !species || !h2oFrequency || !user_id) {
-		res.status(422).json({ message: "The following entries: user_id, nickname, species, and h2oFrequency are required." })
+	const { nickname, species, h2o_frequency, user_id } = req.body
+	if (!nickname || !species || !h2o_frequency || !user_id) {
+		res.status(422).json({ message: "The following entries: user_id, nickname, species, and h2o_frequency are required." })
 	} else {
 		next()
 	}
