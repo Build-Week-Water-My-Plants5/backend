@@ -21,7 +21,7 @@ function remove(plant_id) {
 }
 
 async function add(newPlant) {
-	const [plant] = await db('plants').insert(newPlant, ['plant_id', 'nickname', 'species', 'h2o_frequency', 'image', 'user_id'])
+	const [plant] = await db('plants').insert(newPlant, ['plant_id', 'nickname', 'species', 'h2o_frequency', 'image_url', 'user_id'])
 	return plant;
 }
 

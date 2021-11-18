@@ -16,7 +16,7 @@ function getUserPlants(user_id) {
 	return db("users")
 		.leftJoin('plants', 'users.user_id', 'plants.user_id')
 		.where("users.user_id", user_id)
-		.select('h2o_frequency', 'image', 'nickname', 'plant_id', 'species', 'phone_number')
+		.select('h2o_frequency', 'image_url', 'nickname', 'plant_id', 'species', 'phone_number')
 		.orderBy('plant_id')
 }
 
