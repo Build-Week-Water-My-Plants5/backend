@@ -91,10 +91,60 @@
 
 [GET] /api/plants/
 
+[
+    {
+        "plant_id": 1,
+        "nickname": "pee-shooter",
+        "species": "gattling",
+        "h2o_frequency": "once a week",
+        "image_url": null,
+        "user_id": 6
+    },
+    {
+        "plant_id": 2,
+        "nickname": "foo-tree",
+        "species": "foo",
+        "h2o_frequency": "once a week",
+        "image_url": null,
+        "user_id": 2
+    }
+]
+
 [GET] /api/plants/:id
+
+{
+    "plant_id": 1,
+    "nickname": "pee-shooter",
+    "species": "gattling",
+    "h2o_frequency": "once a week",
+    "image_url": null,
+    "user_id": 6
+}
 
 [PUT] /api/plants/:id
 
+{
+    "plant_id": 2,
+    "nickname": "bar-tree",
+    "species": "bar",
+    "h2o_frequency": "once a week",
+    "image_url": null,
+    "user_id": 2
+}
+
 [DELETE] /api/plants/:id
 
+{
+    "message": "Plant was killed by magic"
+}
+
 [POST] /api/plants/
+
+{
+    "plant_id": 1,
+    "nickname": "pee-shooter",
+    "species": "gattling",
+    "h2o_frequency": "once a week",
+    "image_url": null,
+    "user_id": 6
+}
