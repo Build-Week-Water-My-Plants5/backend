@@ -52,9 +52,20 @@
 
 [GET] /api/users/:id/plants
 
-
+[
+    {
+        "h2o_frequency": null,
+        "image_url": null,
+        "nickname": null,
+        "plant_id": null,
+        "species": null,
+        "phone_number": null
+    }
+]
 
 [PUT] /api/users/:id
+
+
 
 # Auth
 
