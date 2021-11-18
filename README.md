@@ -9,8 +9,6 @@
 [GET] /api/users/
 
 ```JSON
-
-
 [
     {
         "user_id": 1,
